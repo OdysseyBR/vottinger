@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vottinger</title>
+  <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+
+  <!-- TELA INICIAL -->
+  <section id="home-screen">
+    <h1 class="title">Vottinger</h1>
+    <p class="subtitle">Simulador de Câmara para Cities: Skylines</p>
+
+    <button id="start-btn">Iniciar Votação</button>
+
+    <footer>© 2026 Ignaz Studios</footer>
+  </section>
+
+  <!-- TELA DE CONFIGURAÇÃO DA VOTAÇÃO -->
+  <section id="config-screen" class="hidden">
+    <h2>Configurar Simulação</h2>
+
+    <div class="config-box">
+      <label>Categoria da pauta:</label>
+      <select id="categoria">
+        <option value="educacao">Educação</option>
+        <option value="seguranca">Segurança</option>
+        <option value="saude">Saúde</option>
+        <option value="infraestrutura">Infraestrutura</option>
+        <option value="impostos">Impostos</option>
+        <option value="lixo">Lixo</option>
+        <option value="energia">Energia</option>
+        <option value="agua">Água</option>
+        <option value="meioambiente">Meio Ambiente</option>
+        <option value="transporte">Transporte Público</option>
+        <option value="portos">Portos</option>
+        <option value="aeroportos">Aeroportos</option>
+        <option value="leis">Leis e Regras</option>
+        <option value="orcamento">Orçamento Público</option>
+        <option value="bombeiros">Corpo de Bombeiros</option>
+      </select>
+
+      <label>Pauta (ação):</label>
+      <select id="pauta">
+        <option value="ajustar">Ajustar</option>
+        <option value="remover">Remover</option>
+        <option value="adicionar">Adicionar</option>
+        <option value="melhorar">Melhorar</option>
+        <option value="criar">Criar</option>
+      </select>
+
+      <label>Seu lado político:</label>
+      <select id="lado-player">
+        <option value="esquerda">Esquerda</option>
+        <option value="direita">Direita</option>
+      </select>
+
+      <label>Vereadores de esquerda:</label>
+      <input type="number" id="qt-esquerda" min="1" value="2">
+
+      <label>Vereadores de direita:</label>
+      <input type="number" id="qt-direita" min="1" value="2">
+
+      <div style="display:flex; gap:10px; margin-top:18px;">
+        <button id="iniciar-simulacao">Confirmar e Iniciar</button>
+        <button id="config-back-btn" class="small-btn">Voltar</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TELA DE SIMULAÇÃO (mostra 1 vereador por vez) -->
+  <section id="simulation-screen" class="hidden">
+    <h2>Simulação dos Votos</h2>
+    <div id="simulation-info"></div>
+
+    <div id="simulation-card" class="vote-card hidden">
+      <div class="vote-card-left">
+        <div class="avatar-placeholder">V</div>
+      </div>
+      <div class="vote-card-body">
+        <div id="card-name" class="card-name">Nome Vereador</div>
+        <div id="card-meta" class="card-meta">Esquerda / Partido XYZ</div>
+        <div id="card-vote" class="card-vote">VOTO</div>
+      </div>
+    </div>
+
+    <div id="progress-wrap">
+      <div id="progress-bar"><div id="progress-fill"></div></div>
+      <div id="progress-text"></div>
+    </div>
+
+    <div id="simulation-log" class="log-hidden"></div>
+  </section>
+
+  <!-- TELA DE RESULTADO -->
+  <section id="result-screen" class="hidden">
+    <h2>Resultado Final</h2>
+    <div id="result-text"></div>
+    <div style="margin-top:18px;">
+      <button id="back-to-config" class="small-btn">Nova Simulação</button>
+      <button id="back-to-home" class="small-btn">Voltar ao Início</button>
+    </div>
+  </section>
+
+  <!-- SONS (coloque os arquivos em src/sounds/) -->
+  <audio id="audio-sim" src="src/sounds/somDoSim.wav" preload="auto"></audio>
+  <audio id="audio-nao" src="src/sounds/somDoNao.wav" preload="auto"></audio>
+
+  <script src="src/js/script.js"></script>
+</body>
+</html>
