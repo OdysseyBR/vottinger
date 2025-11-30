@@ -1,0 +1,22 @@
+{
+  "pautas": [
+    {
+      "id": 1,
+      "titulo": "Melhorar a Educação",
+      "descricao": "Projeto para reajustar em 12% o salário dos professores municipais.",
+      "categoria": "educacao"
+    },
+    {
+      "id": 2,
+      "titulo": "Criação de novo parque público",
+      "descricao": "Construção de um parque no bairro central.",
+      "categoria": "infraestrutura"
+    },
+    {
+      "id": 3,
+      "titulo": "Redução de impostos para pequenas empresas",
+      "descricao": "Redução de 5% na taxa para pequenos comércios.",
+      "categoria": "economia"
+    }
+  ]
+}

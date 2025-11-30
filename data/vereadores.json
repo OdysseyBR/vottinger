@@ -1,0 +1,9 @@
+{
+  "vereadores": [
+    { "nome": "João Martins", "ideologia": "direita" },
+    { "nome": "Paulo Ferreira", "ideologia": "centro" },
+    { "nome": "Carlos Amaral", "ideologia": "esquerda" },
+    { "nome": "Ana Silveira", "ideologia": "direita" },
+    { "nome": "Maria Lopes", "ideologia": "esquerda" }
+  ]
+}
