@@ -49,6 +49,8 @@
         <option value="adicionar">Adicionar</option>
         <option value="melhorar">Melhorar</option>
         <option value="criar">Criar</option>
+        <option value="aumentar">Aumentar</option>
+        <option value="diminuir">Diminuir</option>
       </select>
 
       <label>Seu lado político:</label>
@@ -62,15 +64,22 @@
 
       <label>Vereadores de direita:</label>
       <input type="number" id="qt-direita" min="1" value="2">
+    
+      <!-- HEMICICLO DE VEREADORES -->
+      <div id="hemiciclo-container">
+        <h3>Distribuição das Cadeiras</h3>
+        <canvas id="hemiciclo-canvas" width="420" height="240"></canvas>
+        <p id="hemiciclo-info" class="hemiciclo-info"></p>
+      </div>
 
       <div style="display:flex; gap:10px; margin-top:18px;">
-        <button id="iniciar-simulacao">Confirmar e Iniciar</button>
+        <button id="iniciar-simulacao">Confirmar e Simular</button>
         <button id="config-back-btn" class="small-btn">Voltar</button>
       </div>
     </div>
   </section>
 
-  <!-- TELA DE SIMULAÇÃO (mostra 1 vereador por vez) -->
+  <!-- TELA DE SIMULAÇÃO -->
   <section id="simulation-screen" class="hidden">
     <h2>Simulação dos Votos</h2>
     <div id="simulation-info"></div>
@@ -104,7 +113,7 @@
     </div>
   </section>
 
-  <!-- SONS (coloque os arquivos em src/sounds/) -->
+  <!-- SONS -->
   <audio id="audio-sim" src="src/sounds/somDoSim.wav" preload="auto"></audio>
   <audio id="audio-nao" src="src/sounds/somDoNao.wav" preload="auto"></audio>
 
