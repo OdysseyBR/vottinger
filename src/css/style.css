@@ -143,3 +143,26 @@ select, input[type="number"] {
   button { font-size: 15px; padding: 10px 16px; }
   .vote-card { flex-direction: row; gap: 12px; }
 }
+
+/* ----------------------------- */
+/* HEMICICLO DE CADEIRAS        */
+/* ----------------------------- */
+#hemiciclo-container {
+    margin-top: 22px;
+    padding: 16px;
+    background: #0f0e11;
+    border-radius: 12px;
+    border: 1px solid rgba(76,11,139,0.18);
+    text-align: center;
+}
+
+#hemiciclo-container h3 {
+    color: var(--green);
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+#hemiciclo-canvas {
+    width: 100%;
+    max-width: 420px;
+}
